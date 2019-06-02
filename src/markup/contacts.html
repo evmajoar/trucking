@@ -1,0 +1,46 @@
+<section class="contact">
+  <div class="container">
+    <h2 class="contact__title">Контакты</h2>
+    <section class="contact__adress adress">
+      <h3 class="adress__title">Адрес</h3>
+      <ul class="adress__list">
+        <li class="adress__item">г. Москва, ул. Проспекторная, д. 15 оф 356</li>
+      </ul>
+    </section>
+    <section class="contact__contacts contacts">
+      <h3 class="contacts__title">Контакты</h3>
+      <ul class="contacts__list">
+        <li class="contacts__item">
+          <a class="contacts__item contacts__item--icon-phone" href="tel:+79090029039">+7 909 002 90 39</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__item contacts__item--icon-phone2" href="tel:+79090029039">+7 909 002 90 39</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__item contacts__item--icon-email" href="mailto:e-mail@email.com">e-mail@email.com</a>
+        </li>
+      </ul>
+    </section>
+    <section class="contact__order order">
+      <h2 class="order__title visually-hidden">Форма заявки</h2>
+      <p class="order__text"><b>Есть вопрос?</b> Оставьте свои контакты, и мы Вам перезвоним</p>
+      <form class="order__form" action="/" method="POST">
+        <ul class="order__form-list">
+          <li class="order__form-item">
+            <label class="visually-hidden" for="name">Имя</label>
+            <input id="name" class="order__form-input" type="text" name="name" placeholder="Имя">
+          </li>
+          <li class="order__form-item">
+            <label class="visually-hidden" for="name">Телефон</label>
+            <input id="phone" class="order__form-input" type="tel" name="phone" placeholder="Телефон">
+          </li>
+          <li class="order__form-item">
+            <label class="visually-hidden" for="name">Ваш вопрос</label>
+            <textarea id="message" class="order__form-textarea" name="message" placeholder="Ваш вопрос"></textarea>
+          </li>
+        </ul>
+        <button class="order__form-button button button--small">Отправить</button>
+      </form>
+    </section>
+  </div>
+</section>

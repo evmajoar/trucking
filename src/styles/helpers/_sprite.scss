@@ -1,0 +1,67 @@
+%svg-common {
+	background: url("../icons/sprite.svg") no-repeat;
+}
+
+%-svg-icon-building {
+	@extend %svg-common;
+	background-position: 0 0;
+	width: 25px;
+	height: 25px;
+}
+
+%-svg-icon-call {
+	@extend %svg-common;
+	background-position: 0 6.426735218508997%;
+	width: 20px;
+	height: 20px;
+}
+
+%-svg-icon-docs {
+	@extend %svg-common;
+	background-position: 0 13.235294117647058%;
+	width: 69px;
+	height: 69px;
+}
+
+%-svg-icon-email {
+	@extend %svg-common;
+	background-position: 0 29.00763358778626%;
+	width: 22px;
+	height: 16px;
+}
+
+%-svg-icon-money {
+	@extend %svg-common;
+	background-position: 0 37.90087463556851%;
+	width: 96px;
+	height: 66px;
+}
+
+%-svg-icon-phone-black {
+	@extend %svg-common;
+	background-position: 0 51.041666666666664%;
+	width: 15px;
+	height: 25px;
+}
+
+%-svg-icon-phone-white {
+	@extend %svg-common;
+	background-position: 0 60.714285714285715%;
+	width: 23px;
+	height: 45px;
+}
+
+%-svg-icon-poput {
+	@extend %svg-common;
+	background-position: 0 81.09756097560975%;
+	width: 80px;
+	height: 81px;
+}
+
+%-svg-icon-removal {
+	@extend %svg-common;
+	background-position: 0 100%;
+	width: 86px;
+	height: 62px;
+}
+
