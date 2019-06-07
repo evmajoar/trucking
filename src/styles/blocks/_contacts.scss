@@ -1,3 +1,54 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
-@import '../helpers/sprite';
+
+// SECTION CONTACTS IN CONTACT ===============
+.contacts {
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+  }
+
+  &__list {
+    // display: flex;
+    // flex-wrap: wrap;
+    // align-items: flex-start;
+    // justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  &__item {
+    // width: calc( 100% / 2 );
+    margin-bottom: 12px;
+    &:last-child {
+      margin-bottom: 0;
+      // width: 100%;
+    }
+  }
+
+  &__link {
+    display: block;
+    color: $dark-grey;
+
+    &:active {
+      color: $dark-red;
+      > svg {
+        path {
+          fill: $dark-red;
+        }
+      }
+    }
+
+    .icon-phone {
+      vertical-align: middle;
+      width: 11px;
+      margin-right: 5px;
+      path {
+        fill: $dark-grey;
+      }
+    }
+
+  }
+
+}

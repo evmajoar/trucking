@@ -22,9 +22,10 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  font: 400 16px/1.2 $mainFont;
-  color: $black;
+  font: 400 14px/1.4 $raleway;
+  color: $dark-grey;
   background: $white;
+  min-width: 320px;
   text-rendering: optimizeLegibility;
 }
 

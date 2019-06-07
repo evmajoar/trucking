@@ -1,2 +1,43 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
+
+.main-header {
+  position: relative;
+  background: $dark-grey;
+  color: $white;
+  padding: 50px 0 100px;
+
+  &__bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+
+  &__phone {
+    display: block;
+    position: relative;
+    color: $white;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    &:active {
+      color: $dark-red;
+      > svg {
+        path {
+          fill: $dark-red;
+        }
+      }
+    }
+
+  }
+
+  .icon-phone {
+    width: 14px;
+  }
+
+  &__preview {
+    margin-top: 70px;
+  }
+}

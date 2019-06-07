@@ -1,0 +1,44 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+// SECTION CONTACT ===============
+.contact {
+  background: $dark-grey;
+  color: $white;
+  padding: 45px 0 25px;
+
+  .container {
+    flex-direction: column;
+    justify-content: flex-start;
+    // align-items: flex-start;
+  }
+
+  &__box {
+    background: $white;
+    padding: 25px;
+    position: relative;
+    margin-top: 25px;
+    color: $dark-grey;
+
+    &::before {
+      @include pseudo();
+      bottom: -10px;
+      left: -10px;
+      border: 10px solid transparent;
+      border-left: 10px solid $white;
+      transform: rotate(-135deg);
+    }
+
+  }
+
+  &__contacts {
+    margin-top: 15px;
+  }
+
+  &__map {
+    display: block;
+    width: 100%;
+    margin-top: -140px;
+  }
+
+}

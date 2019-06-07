@@ -1,2 +1,26 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
+
+.adress {
+  background: $white;
+
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #111;
+  }
+
+  &__list {
+    margin-top: 10px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__text {
+    display: block;
+  }
+
+}

@@ -1,2 +1,11 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
+
+.logo {
+  display: block;
+  max-width: 70px;
+  img {
+    width: 100%;
+    height: auto;
+  }
+}

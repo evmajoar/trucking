@@ -8,17 +8,45 @@
   margin: 0 auto;
   padding: 0 $gutter;
   width: 100%;
-  @include breakpoint(el) {
-    max-width: 992px;
+  // @include breakpoint(el) {
+  //   min-width: 992px;
+  // }
+  // @include breakpoint(lg) {
+  //   min-width: 768px;
+  // }
+  // @include breakpoint(md) {
+  //   min-width: 576px;
+  // }
+  // @include breakpoint(sm) {
+  //   min-width: 480px;
+  // }
+}
+
+.title {
+  font: 900 32px $roboto;
+
+  &--white {
+    color: $white;
   }
-  @include breakpoint(lg) {
-    max-width: 768px;
+
+  &--popup {
+    font-size: 20px;
   }
-  @include breakpoint(md) {
-    max-width: 576px;
-  }
-  @include breakpoint(sm) {
-    max-width: 480px;
+
+}
+
+.button {
+  display: block;
+  height: 50px;
+  background: $red;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 23px;
+  text-align: center;
+  color: $white;
+  width: 100%;
+  &:active {
+    background: $dark-red;
   }
 }
 
@@ -33,4 +61,34 @@
   margin: -1px;
   padding: 0;
   border: 0;
+}
+
+
+// SVG INLINE ICONS
+.icon-email, 
+.icon-phone, 
+.icon-call,
+.icon-building {
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.icon-email {
+  width: 18px;
+  height: 14px;
+}
+
+.icon-phone {
+  margin-right: 10px;
+  width: 18px;
+}
+
+.icon-call {
+  width: 20px;
+  height: 21px;
+}
+
+.icon-building {
+  width: 25px;
+  margin-right: 10px;
 }

@@ -1,0 +1,10 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.main-content {
+
+  &__advantages {
+    margin-bottom: -25px;
+  }
+
+}

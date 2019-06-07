@@ -1,62 +1,37 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
 
-.modals__popup {
-  position: relative;
-  max-width: 670px; 
-  min-width: 260px;
-  margin: 0 auto;
-  padding: 45px 75px;
-  background-color: $white;
-  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.04);
-  @include breakpoint (sm) {
-    padding: 45px 20px;
-  }
-}
-
-
-//Popup-display
-.modals {
+.modal {
   position: fixed;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: 100%;
   overflow-x: hidden;
   overflow-y: auto;
-  z-index: 10;
-}
+  z-index: 100;
 
-.modals--closed {
-  display: none;
-}
-
-.modals__popup {
-  z-index: 30;
-  @include breakpoint (md) {
-    overflow-x: hidden;
-    overflow-y: auto;
+  &--opened {
+    display: flex;
   }
-}
 
-.modals__popup {
-  max-height: 100%;
-}
+  &__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.5);
+    z-index: 110;
+    cursor: pointer;
+    display: none;
+    animation: show .3s ease-in-out;
 
-.modals__overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0,0,0,.5);
-  z-index: 20;
-  cursor: pointer;
-  display: none;
-  animation: show .3s ease-in-out;
+    &--show {
+      display: block;
+    }
 
-  &--show {
-    display: block;
   }
+
 }

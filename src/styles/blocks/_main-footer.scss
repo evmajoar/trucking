@@ -4,4 +4,25 @@
 .main-footer {
   // Прижимаем футер к низу экрана
   margin-top: auto;
+  background: $dark-grey;
+  padding: 20px 0;
+
+  .container {
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    max-width: 50px;
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__subnav {
+    width: calc(100% - 61px - 15px);
+  }
+
 }

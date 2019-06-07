@@ -1,0 +1,40 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+ 
+.close-button {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  z-index: 130;
+  width: 30px;
+  height: 30px;
+
+  &::before,
+  &::after {
+    @include pseudo();
+    width: 3px;
+    height: 30px;
+    border-radius: 3px;
+    background-color: $dark-grey;
+    z-index: 130; 
+    right: 13px;
+    top: 0; 
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+  
+  &:active {
+    &::before,
+    &::after {
+      background-color: $red;
+    }
+  }
+
+}

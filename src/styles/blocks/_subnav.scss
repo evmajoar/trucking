@@ -1,0 +1,40 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.subnav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-end;
+
+  &__item {
+    margin-bottom: 10px;
+
+    &:first-child {
+      margin-right: 15px;
+    }
+
+    &:last-child {
+      width: 100%;
+      margin-right: 0;
+      text-align: right;
+    }
+
+  }
+
+  &__link {
+    color: $white;
+    font-size: 14px;
+
+    &--policy {
+      text-decoration: underline;
+    }
+
+    &:active {
+      color: $red;
+      text-decoration: none;
+    }
+
+  }
+  
+}

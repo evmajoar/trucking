@@ -1,0 +1,45 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.preview {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 430px;
+
+  &__title {
+    margin-top: 40px;
+  }
+
+  &__slogan {
+    order: -1;
+    display: block;
+    border: 1px solid $red;
+    padding: 12px 15px;
+    font-weight: 500;
+    font-size: 16px;
+    position: relative;
+    &::before {
+      @include pseudo();
+      bottom: -11px;
+      left: -11px;
+      border: 10px solid transparent;
+      border-left: 10px solid $red;
+      transform: rotate(-135deg);
+    }
+  }
+
+  &__description {
+    font-size: 20px;
+    margin-top: 40px;
+    font-weight: 300;
+  }
+
+  &__button {
+    margin-top: 40px;
+    @include breakpoint(s) {
+      max-width: 200px;
+    }
+  }
+}

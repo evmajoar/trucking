@@ -1,2 +1,106 @@
 @import '../helpers/variables';
 @import '../helpers/mixins';
+
+.order {
+
+  &__text {
+    font-size: 18px;
+    font-weight: 400;
+    b {
+      display: block;
+      font-size: 30px;
+      margin-bottom: 5px;
+    }
+  }
+
+  &__form {
+    margin-top: 20px;
+
+    &-list {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      justify-content: space-between;
+    }
+
+    &-item {
+      width: calc( 100% / 2 - 20px );
+      margin-bottom: 17px;
+
+      &--long {
+        width: 100%;
+      }
+
+    }
+
+    &-input,
+    &-textarea {
+      width: 100%;
+      background: none;
+      border: 0;
+      border-bottom: 2px solid #ddd;
+      color: $white;
+      height: 30px;
+      @include placeholder {
+        color: $white;
+      }
+      @include placeholderHidden;
+      &:focus {
+        border-bottom-color: $white;
+      }
+    }
+
+    &-textarea {
+      resize: none;
+    }
+
+  }
+
+  // POPUP STYLES
+  &-popup {
+    background: $white;
+    padding: 40px 0;
+    z-index: 120;
+    position: relative;
+    display: none;
+
+    .container {
+      flex-direction: column;
+    }
+
+    &__title {
+      text-align: center;
+    }
+
+    &__form-list {
+      margin-top: 20px;
+    }
+
+    &__form-input,
+    &__form-textarea {
+      width: 100%;
+      background: none;
+      border: 0;
+      border: 1px solid #ddd;
+      color: $dark-grey;
+      height: 50px;
+      padding: 5px 20px;
+      margin-bottom: 10px;
+      @include placeholder {
+        color: $dark-grey;
+      }
+      @include placeholderHidden;
+      &:focus {
+        border-color: $light-grey;
+      }
+    }
+
+    &__form-textarea {
+      resize: none;
+      padding-top: 15px;
+      height: 100px;
+    }
+
+  }
+
+}
