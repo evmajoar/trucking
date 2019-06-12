@@ -3,15 +3,30 @@
 
 .main-header {
   position: relative;
-  background: $dark-grey;
+  background: $dark-grey url($imageDir + 'header-bg-320.jpg') center / cover no-repeat;
   color: $white;
   padding: 50px 0 100px;
+
+  @include breakpoint(md) {
+    padding: 76px 0 146px;
+    background-image: url($imageDir + 'header-bg-768.jpg');
+  }
+
+  @include breakpoint(el) {
+    padding: 60px 0 160px;
+    background-image: url($imageDir + 'header-bg-1920.jpg');
+  }
 
   &__bar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 100%;
+
+    @include breakpoint(md) {
+      justify-content: flex-start;
+    }
+
   }
 
   &__phone {
@@ -22,6 +37,16 @@
     font-size: 18px;
     line-height: 21px;
 
+    @include breakpoint(md) {
+      font-size: 22px;
+      margin-left: 200px;
+    }
+
+    @include breakpoint(el) {
+      font-size: 22px;
+      margin-left: 250px;
+    }
+
     &:active {
       color: $dark-red;
       > svg {
@@ -31,13 +56,30 @@
       }
     }
 
+    &:hover {
+      @include breakpoint(el) {
+        color: $red;
+      }
+    }
+
   }
 
   .icon-phone {
     width: 14px;
+
+    @include breakpoint(md) {
+      width: 20px;
+      margin-right: 20px;
+    }
+
   }
 
   &__preview {
     margin-top: 70px;
+
+    @include breakpoint(el) {
+      margin-top: 80px;
+    }
+
   }
 }

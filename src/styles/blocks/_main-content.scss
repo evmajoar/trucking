@@ -5,6 +5,20 @@
 
   &__advantages {
     margin-bottom: -25px;
+    position: relative;
+    z-index: 2;
+
+    @include breakpoint(md) {
+      margin-bottom: -38px;
+    }
+
+  }
+
+  &--thanks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
   }
 
 }

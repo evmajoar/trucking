@@ -7,14 +7,23 @@
   background: $dark-grey;
   padding: 20px 0;
 
+  @include breakpoint(el) {
+    padding: 40px 0;
+  }
+
   .container {
-    flex-wrap: nowrap;
+    flex-direction: row;
     justify-content: space-between;
     align-items: center;
   }
 
   &__logo {
     max-width: 50px;
+
+    @include breakpoint(el) {
+      max-width: 108px;
+    }
+
     img {
       width: 100%;
       height: auto;

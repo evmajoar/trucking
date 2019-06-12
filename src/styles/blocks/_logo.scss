@@ -4,8 +4,18 @@
 .logo {
   display: block;
   max-width: 70px;
+
+  @include breakpoint(md) {
+    max-width: 80px;
+  }
+
+  @include breakpoint(el) {
+    max-width: 108px;
+  }
+
   img {
     width: 100%;
     height: auto;
   }
+  
 }

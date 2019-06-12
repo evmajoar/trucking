@@ -16,11 +16,23 @@
     // align-items: flex-start;
     // justify-content: space-between;
     margin-top: 15px;
+
+    @include breakpoint(md) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
   }
 
   &__item {
     // width: calc( 100% / 2 );
     margin-bottom: 12px;
+
+    @include breakpoint(md) {
+      width: 50%;
+      margin-bottom: 18px;
+    }
+
     &:last-child {
       margin-bottom: 0;
       // width: 100%;
@@ -40,10 +52,21 @@
       }
     }
 
+    &:hover {
+      @include breakpoint(el) {
+        color: $red;
+      }
+    }
+
     .icon-phone {
       vertical-align: middle;
       width: 11px;
       margin-right: 5px;
+
+      @include breakpoint(md) {
+        width: 13px;
+      }
+
       path {
         fill: $dark-grey;
       }

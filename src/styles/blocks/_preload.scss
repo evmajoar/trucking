@@ -2,7 +2,6 @@
 @import '../helpers/mixins';
 
 .preload {
-  float: left;
   margin: 0 10px 10px 0;
   padding: 20px 20px 20px;
   border-radius: 5px;
@@ -19,7 +18,7 @@
   align-items: center;
   justify-content: center;
   animation: show .3s ease-in-out;
-  z-index: 30;
+  z-index: 150;
 
   &--show {
     display: flex;
@@ -31,7 +30,7 @@
   height: 10px;
   margin: 0 auto;
   padding: 10px;
-  border: 7px dashed #4b9cdb;
+  border: 7px dashed $red;
   border-radius: 100%;
 }
 

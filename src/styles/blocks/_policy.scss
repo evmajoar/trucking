@@ -8,9 +8,23 @@
   position: relative;
   display: none;
   max-height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+  width: 100%;
+  animation: slide-down .25s ease-in-out;
+
+  &--show {
+    display: block;
+  }
 
   .container {
     background: $white;
+  }
+
+  &__title {
+    @include breakpoint(md) {
+      text-align: left;
+    }
   }
 
   ol {
@@ -22,10 +36,31 @@
       font-size: 16px;
       margin-top: 25px;
 
+      @include breakpoint(md) {
+        font-size: 18px;
+        margin-top: 30px;
+      }
+
+      @include breakpoint(el) {
+        font-size: 20px;
+        margin-top: 35px;
+      }
+
       > ul, p {
         font-weight: 400;
         margin-top: 15px;
         font-size: 12px;
+
+        @include breakpoint(md) {
+          font-size: 14px;
+          margin-top: 20px;
+        }
+
+        @include breakpoint(el) {
+          font-size: 16px;
+          margin-top: 25px;
+        }
+
       }
 
       > ul {

@@ -3,27 +3,34 @@
 
 .container {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   max-width: $commonWidth;
   margin: 0 auto;
   padding: 0 $gutter;
   width: 100%;
-  // @include breakpoint(el) {
-  //   min-width: 992px;
-  // }
-  // @include breakpoint(lg) {
-  //   min-width: 768px;
-  // }
-  // @include breakpoint(md) {
-  //   min-width: 576px;
-  // }
-  // @include breakpoint(sm) {
-  //   min-width: 480px;
-  // }
+
+  @include breakpoint(el) {
+    max-width: 1200px;
+    padding: 0 15px;
+  }
+
+  @include breakpoint(md) {
+    padding: 0 30px;
+  }
+
 }
 
 .title {
   font: 900 32px $roboto;
+
+  @include breakpoint(md) {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  @include breakpoint(el) {
+    font-size: 52px;
+  }
 
   &--white {
     color: $white;
@@ -31,6 +38,15 @@
 
   &--popup {
     font-size: 20px;
+
+    @include breakpoint(md) {
+      font-size: 34px;
+    }
+
+    @include breakpoint(el) {
+      font-size: 48px;
+    }
+
   }
 
 }
@@ -40,14 +56,36 @@
   height: 50px;
   background: $red;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 23px;
   text-align: center;
   color: $white;
+  transition: all .25s ease-in-out;
   width: 100%;
+
+  @include breakpoint(md) {
+    font-size: 20px;
+  }
+
   &:active {
     background: $dark-red;
   }
+
+  &:hover {
+    @include breakpoint(el) {
+      background: $dark-grey;
+    }
+  }
+
+  &--white {
+    &:hover {
+      @include breakpoint(el) {
+        background: $white;
+        color: $dark-grey;
+      }
+    }
+  }
+
 }
 
 .visually-hidden {
@@ -63,6 +101,12 @@
   border: 0;
 }
 
+.has-error {
+  input, 
+  textarea {
+    border-bottom-color: brown;
+  }
+}
 
 // SVG INLINE ICONS
 .icon-email, 
@@ -76,6 +120,11 @@
 .icon-email {
   width: 18px;
   height: 14px;
+
+  @include breakpoint(md) {
+    width: 22px;
+  }
+
 }
 
 .icon-phone {

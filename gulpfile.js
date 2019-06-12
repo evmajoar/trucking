@@ -22,6 +22,7 @@ const notify = require( 'gulp-notify' );
 const rename = require( 'gulp-rename' );
 const newer = require( 'gulp-newer' );
 const uglify = require( 'gulp-uglify' );
+const concat = require( 'gulp-concat' )
 const gulpIf = require( 'gulp-if' );
 const del = require( 'del' );
 const browserSync = require( 'browser-sync' ).create();
@@ -131,7 +132,6 @@ function compileCSS() {
       cascade: false
     } ) )
     .pipe( csscomb() )
-    .pipe( gulp.dest( path.build.css ) )
     .pipe( csso({
       comments: false
     } ) )
@@ -155,7 +155,7 @@ function compileJS() {
         message: "Error: <%= error.message %>"
       } )
     } ) )
-    .pipe( gulp.dest( path.build.js ) )
+    .pipe(concat('script.js'))
     .pipe( uglify() )
     .pipe( rename({
       suffix: '.min'
@@ -290,7 +290,7 @@ exports.cleanDirectory = cleanDirectory;
 
 const build = gulp.series(cleanDirectory, gulp.parallel(
   compilePHP,
-  compileHTML,
+  // compileHTML,
   compileCSS,
   compileJS,
   assemblyVendor,
@@ -324,7 +324,7 @@ function runServer() {
 
 function watchFiles() {
   gulp.watch( path.watch.php, compilePHP );
-  gulp.watch( path.watch.html, compileHTML );
+  // gulp.watch( path.watch.html, compileHTML );
   gulp.watch( path.watch.css, compileCSS );
   gulp.watch( path.watch.js, compileJS );
   gulp.watch( path.watch.ven, assemblyVendor );
