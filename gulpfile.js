@@ -292,7 +292,7 @@ exports.cleanDirectory = cleanDirectory;
 
 const build = gulp.series(cleanDirectory, gulp.parallel(
   compilePHP,
-  // compileHTML,
+  compileHTML,
   compileCSS,
   compileJS,
   assemblyVendor,
@@ -326,7 +326,7 @@ function runServer() {
 
 function watchFiles() {
   gulp.watch( path.watch.php, compilePHP );
-  // gulp.watch( path.watch.html, compileHTML );
+  gulp.watch( path.watch.html, compileHTML );
   gulp.watch( path.watch.css, compileCSS );
   gulp.watch( path.watch.js, compileJS );
   gulp.watch( path.watch.ven, assemblyVendor );

@@ -6,13 +6,13 @@
 $(function() {
 
   var $anchor = $( '.js-anchor' ),
-      $buttonOrder = $( '.js-order' );
-      $buttonPolicy = $( '.js-policy' );
+      $buttonOrder = $( '.js-order' ),
+      $buttonPolicy = $( '.js-policy' ),
 
-      $modals = $( '.modals' );
-      $popupOrder = $( '.order-popup' );
-      $popupPolicy = $( '.policy' );
-      $popupOverlay = $( '.modals__overlay' )
+      $modals = $( '.modals' ),
+      $popupOrder = $( '.order-popup' ),
+      $popupPolicy = $( '.policy' ),
+      $popupOverlay = $( '.modals__overlay' ),
       $closeButton = $( '.close-button' );
 
   // Anchor
@@ -32,10 +32,7 @@ $(function() {
 
     $('body').removeClass( 'hidden' );
 
-    $modals
-    .removeClass( 'modals--opened' )
-    .find( '.modals__overlay' )
-    .removeClass('modals__overlay--show');
+    $modals.removeClass( 'modals--opened' ).find( '.modals__overlay' ).removeClass('modals__overlay--show');
 
     if ( $popupOrder.hasClass( 'order-popup--show' ) ) {
       $popupOrder.removeClass( 'order-popup--show' );
@@ -50,28 +47,19 @@ $(function() {
 
     $('body').addClass( 'hidden' );
 
-    $modals
-      .addClass( 'modals--opened' )
-      .find( '.modals__overlay' )
-      .addClass( 'modals__overlay--show' )
-      .siblings( '.order-popup' )
-      .addClass( 'order-popup--show' )
-      .find( 'input' )
-      .first()
-      .focus();
+    $modals.addClass( 'modals--opened' ).find( '.modals__overlay' ).addClass( 'modals__overlay--show' ).siblings( '.order-popup' ).addClass( 'order-popup--show' ).find( 'input' ).first().focus();
 
   });
 
-  $buttonPolicy.click( function() {
+  $buttonPolicy.click( function(event) {
 
-    $('body').addClass( 'hidden' );
+    if( $(this).attr( 'href' ) === '#' ) {
+      event.preventDefault();
 
-    $modals
-      .addClass( 'modals--opened' )
-      .find( '.modals__overlay' )
-      .addClass( 'modals__overlay--show' )
-      .siblings( '.policy' )
-      .addClass( 'policy--show' );
+      $('body').addClass( 'hidden' );
+
+      $modals.addClass( 'modals--opened' ).find( '.modals__overlay' ).addClass( 'modals__overlay--show' ).siblings( '.policy' ).addClass( 'policy--show' );
+    }
 
   });
 
