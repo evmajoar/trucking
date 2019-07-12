@@ -37,6 +37,7 @@ const path = {
     php: root.src + '*.php',
     html: root.src + '*.html',
     css: root.src + '*.scss',
+    tm: root.src + 'theme/*.*',
     js: root.src + 'scripts/**/*.js',
     img: root.src + 'images/',
     font: root.src + 'fonts/**/*.ttf',
@@ -48,6 +49,7 @@ const path = {
     php: root.build,
     html: root.build,
     css: root.build + 'styles/',
+    tm: root.build + 'theme/',
     js: root.build + 'scripts/',
     img: root.build + 'images/',
     font: root.build + 'fonts/',
@@ -58,13 +60,13 @@ const path = {
   watch: {
     php: root.src + '*.php',
     html: [
-      root.src + 'markup/*.html',
+      root.src + 'markup/**/*.html',
       root.src + '*.html'
     ],
     css: [
-      root.src + 'styles/blocks/*.scss',
-      root.src + 'styles/common/*.scss',
-      root.src + 'styles/helpers/*.scss'
+      root.src + 'styles/blocks/**/*.scss',
+      root.src + 'styles/common/**/*.scss',
+      root.src + 'styles/helpers/**/*.scss'
     ],
     js: root.src + 'scripts/**/*.js',
     img: root.src + 'images/',
