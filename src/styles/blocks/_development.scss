@@ -1,0 +1,61 @@
+@import '../helpers/variables';
+@import '../helpers/mixins';
+
+.development {
+  background: $white;
+  padding: 15px 0 12px;
+
+  @include breakpoint(el) {
+    background: $dark-grey;
+    padding: 10px 0 40px;
+  }
+
+  .container {
+    justify-content: center !important;
+    
+    @include breakpoint(el) {
+      justify-content: flex-end !important;
+    }
+
+  }
+
+  &__link {
+    display: block;
+
+    @include breakpoint(el) {
+      width: 97px;
+      height: 21px;
+    }
+
+    &:active {
+      svg {
+        path {
+          fill: $red;
+        }
+      }
+    }
+
+    &:hover {
+      @include breakpoint(el) {
+        svg {
+          path {
+            fill: $red;
+          }
+        }
+      }
+    }
+
+  }
+
+  &__logo {
+    path {
+      fill: $dark-grey;
+
+      @include breakpoint(el) {
+        fill: $white;
+      }
+
+    }
+  }
+
+}

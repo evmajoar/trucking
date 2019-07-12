@@ -102,6 +102,14 @@
 
     }
 
+    &-input {
+
+      &--tech {
+        display: none !important;
+      }
+
+    }
+
     &-textarea {
       resize: none;
 
@@ -129,7 +137,6 @@
     z-index: 120;
     position: relative;
     display: none;
-    max-width: 768px;
     width: 100%;
     max-height: 100%;
     overflow-x: hidden;
@@ -147,6 +154,7 @@
     .container {
       flex-direction: column;
       background: $white;
+      max-width: 768px;
     }
 
     &__title {
@@ -209,6 +217,14 @@
         border-color: $light-grey;
       }
       
+    }
+
+    &__form-input {
+
+      &--tech {
+        display: none !important;
+      }
+
     }
 
     &__form-textarea {

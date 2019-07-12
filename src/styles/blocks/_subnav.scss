@@ -35,7 +35,6 @@
 
       @include breakpoint(md) {
         width: auto;
-        text-align: left;
         margin-right: 0;
       }
 
@@ -53,6 +52,7 @@
 
     &--policy {
       text-decoration: underline;
+      text-align: right;
     }
 
     &:active {

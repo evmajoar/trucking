@@ -5,10 +5,10 @@
   // Прижимаем футер к низу экрана
   margin-top: auto;
   background: $dark-grey;
-  padding: 20px 0;
+  padding-top: 20px;
 
   @include breakpoint(el) {
-    padding: 40px 0;
+    padding-top: 40px;
   }
 
   .container {
@@ -32,6 +32,10 @@
 
   &__subnav {
     width: calc(100% - 61px - 15px);
+  }
+
+  &__development {
+    margin-top: 20px;
   }
 
 }

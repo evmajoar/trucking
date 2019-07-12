@@ -17,6 +17,18 @@
     background-image: url($imageDir + 'header-bg-1920.jpg');
   }
 
+  .container {
+
+    @include breakpoint(md) {
+     padding: 0 60px;
+    }
+
+    @include breakpoint(el) {
+      padding: 0 30px;
+     }
+
+  }
+
   &__bar {
     display: flex;
     justify-content: space-between;
